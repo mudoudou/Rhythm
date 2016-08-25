@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+ <mapper namespace="com.pan.dao.AdminMapper">  
+ 
+	 <select id="login"  parameterType="String" resultType="String">  
+	     SELECT password FROM admin where 
+	     username = #{username}
+ 
+	 </select>  
+	 <select id="liStudents" resultType="com.pan.po.Student">
+	 	Select name,age,address from student
+	 </select>
+	 
+	 <select id="addstu">
+	 	insert into student value(#{name},#{age},#{address})
+	 </select>
+	  
+ </mapper>  
