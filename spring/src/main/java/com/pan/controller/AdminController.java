@@ -26,7 +26,7 @@ public class AdminController {
 		System.out.println("admin-----------login");
 		if(password.equals(adminService.login(username))){
 			request.getSession().setAttribute("admin", username);
-			model.addAttribute("login_result", "登入成功");
+			model.addAttribute("login_result", "登入成功了！");
 			return "result";
 		}
 		return "login";
